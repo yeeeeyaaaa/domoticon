@@ -13,10 +13,6 @@ module.exports = function(app, options) {
     console.log('info', 'attempting to find Arduino Wifi board');
     var url = new Url(options);
 
-    /*http.get(url.host + ':' + url.port + '/' + url.call + '/' + url.pin, function(data) {
-        console.log(data);
-    });*/
-
     var options = {
         host: url.host,
         path: '/' + url.call + '/' + url.pin,
@@ -30,6 +26,7 @@ module.exports = function(app, options) {
         var body = '';
         res.on('data', function(chunk) {
             //self.emit('connected');
+            console.log('connection established');
             body += chunk;
         });
         res.on('end', function() {
