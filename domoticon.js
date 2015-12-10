@@ -43,8 +43,8 @@ app.route('/domoticon')
 
 //require('./controllers/leds')(app);
 
-require('./controllers/arduinoYun')(app);
+//require('./controllers/arduinoYun')(app);
 
-app.listen(8080, function() {
+app.listen(8000, function() {
     console.log('Raspi Express server listening...');
 });
